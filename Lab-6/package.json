@@ -1,0 +1,9 @@
+﻿{
+  "name": "lab6-ci-app",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "node --check app.js test.js",
+    "test": "node --test",
+    "package": "node -e \"const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('app.js','dist/app.js'); fs.copyFileSync('package.json','dist/package.json'); console.log('Packaged to dist/');\""
+  }
+}
